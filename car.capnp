@@ -112,6 +112,7 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     wrongCruiseMode @87;
     neosUpdateRequired @88;
     modeldLagging @89;
+    iceWarning @90;
   }
 }
 
@@ -155,6 +156,9 @@ struct CarState {
   # cruise state
   cruiseState @10 :CruiseState;
 
+  # outside temp
+  iceWarning @37 :Float32;
+  
   # gear
   gearShifter @14 :GearShifter;
 
