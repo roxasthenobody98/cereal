@@ -112,6 +112,9 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     wrongCruiseMode @87;
     neosUpdateRequired @88;
     modeldLagging @89;
+    pscmHandshaking @90;
+    pscmHandshaked @91;
+    pscmLostHandshake @92;
   }
 }
 
@@ -178,6 +181,11 @@ struct CarState {
   # blindspot sensors
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
   rightBlindspot @34 :Bool; # Is there something blocking the right lane change
+  
+  #apa handshake
+  pscmHandshaking @37 :Bool; #APA Handshaking initial
+  pscmHandshaked @38 :Bool; #APA handshake success
+  pscmLostHandshake @39 :Bool; #APA Lost handshake
 
   struct WheelSpeeds {
     # optional wheel speeds
