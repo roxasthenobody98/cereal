@@ -186,6 +186,8 @@ struct CarState {
   pscmHandshaking @37 :Bool; #APA Handshaking initial
   pscmHandshaked @38 :Bool; #APA handshake success
   pscmLostHandshake @39 :Bool; #APA Lost handshake
+  
+  engineRPM @40 :Float32;
 
   struct WheelSpeeds {
     # optional wheel speeds
